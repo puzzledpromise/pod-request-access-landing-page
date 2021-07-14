@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+
 $color1: #54e6af;
 $color2: #2c344b;
 $color3: #121725;
@@ -13,4 +15,95 @@ $color6: #c2cbe5;
 
 body {
   background-color: $color3;
+  color: $color4;
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  border: 1px solid red;
+
+  width: 1275px;
+  margin-top: 130px;
+
+  .pod-logo {
+    margin-top: -25px;
+
+    img {
+      width: 135px;
+      height: 56px;
+    }
+  }
+
+  .form {
+    margin-top: 88px;
+    width: 723px;
+    h1 {
+      font-size: 52px;
+      font-weight: 400;
+      line-height: 68px;
+      text-transform: uppercase;
+    }
+
+    span {
+      color: $color1;
+    }
+
+    p {
+      margin-top: 24px;
+      color: $color6;
+      width: 445px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .input-line {
+      input {
+        background-color: $color2;
+        height: 56px;
+        width: 427px;
+        border-radius: 30px;
+        border: none;
+        margin-top: 40px;
+        padding-left: 15px;
+        font-weight: bold;
+        font-size: 14px;
+        color: $color4;
+      }
+
+      input::placeholder {
+        color: $color6;
+        opacity: 1;
+      }
+
+      button {
+        height: 56px;
+        outline: none;
+        background-color: $color1;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: none;
+        border-radius: 20px;
+        margin-left: -173px;
+        height: 46px;
+        width: 162px;
+        font-weight: bold;
+        font-size: 14px;
+        color: $color3;
+      }
+    }
+  }
+  .logo-line {
+    margin-top: 30px;
+    height: 29px;
+
+    .logo {
+      margin-right: 40px;
+      color: $color2;
+      filter: brightness(50%);
+    }
+  }
 }
