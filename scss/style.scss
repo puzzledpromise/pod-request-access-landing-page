@@ -97,13 +97,12 @@ body {
     }
   }
   .logo-line {
-    margin-top: 30px;
+    margin-top: 64px;
     height: 29px;
 
-    .logo {
-      margin-right: 40px;
-      color: $color2;
-      filter: brightness(50%);
+    img {
+      height: 29px;
+      margin-right: 33px;
     }
   }
 }
