@@ -24,8 +24,9 @@ body {
 }
 
 .container {
+  position: absolute;
   border: 1px solid red;
-  width: 1275px;
+  width: 723px;
   margin-top: 130px;
 }
 
@@ -119,4 +120,10 @@ body {
 .container .logo-line img {
   height: 29px;
   margin-right: 33px;
+}
+
+.container img.pattern {
+  position: absolute;
+  right: 50px;
+  bottom: -10-px;
 }

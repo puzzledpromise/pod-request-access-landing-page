@@ -64,6 +64,13 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+### SVGs
+
+Changing the color in CSS is tricky. A more feasible approach was to directly manipulate the svg files and change the
+color (`fill`) values in these files.
+
+### Delete Me
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
