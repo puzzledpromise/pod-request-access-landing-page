@@ -24,9 +24,9 @@ body {
 }
 
 .container {
-  position: absolute;
   border: 1px solid red;
-
+  background-color: $color3;
+  z-index: 5;
   width: 723px;
   margin-top: 130px;
 
@@ -111,5 +111,20 @@ body {
     position: absolute;
     right: 50px;
     bottom: -10-px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid green;
+}
+
+.background-image {
+  position: relative;
+  left: -50px;
+
+  img {
+    width: 888px;
   }
 }
