@@ -23,21 +23,25 @@ body {
   justify-content: center;
 }
 
+main {
+  margin-top: 130px;
+}
+
+.pod-logo {
+  position: absolute;
+  top: -25px;
+
+  img {
+    width: 135px;
+    height: 56px;
+  }
+}
+
 .container {
-  border: 1px solid red;
   background-color: $color3;
   z-index: 5;
   width: 723px;
   margin-top: 130px;
-
-  .pod-logo {
-    margin-top: -25px;
-
-    img {
-      width: 135px;
-      height: 56px;
-    }
-  }
 
   .form {
     margin-top: 88px;
@@ -110,19 +114,21 @@ body {
   img.pattern {
     position: absolute;
     right: 50px;
-    bottom: -10-px;
+    bottom: -45px;
+    right: 120px;
   }
 }
 
 main {
+  position: relative;
   display: flex;
   flex-direction: row;
-  border: 1px solid green;
+  align-items: flex-end;
 }
 
 .background-image {
   position: relative;
-  left: -50px;
+  left: -122px;
 
   img {
     width: 888px;

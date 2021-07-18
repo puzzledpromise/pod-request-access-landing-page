@@ -23,21 +23,25 @@ body {
           justify-content: center;
 }
 
+main {
+  margin-top: 130px;
+}
+
+.pod-logo {
+  position: absolute;
+  top: -25px;
+}
+
+.pod-logo img {
+  width: 135px;
+  height: 56px;
+}
+
 .container {
-  border: 1px solid red;
   background-color: #121725;
   z-index: 5;
   width: 723px;
   margin-top: 130px;
-}
-
-.container .pod-logo {
-  margin-top: -25px;
-}
-
-.container .pod-logo img {
-  width: 135px;
-  height: 56px;
 }
 
 .container .form {
@@ -126,10 +130,12 @@ body {
 .container img.pattern {
   position: absolute;
   right: 50px;
-  bottom: -10-px;
+  bottom: -45px;
+  right: 120px;
 }
 
 main {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,12 +143,14 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid green;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .background-image {
   position: relative;
-  left: -50px;
+  left: -122px;
 }
 
 .background-image img {
