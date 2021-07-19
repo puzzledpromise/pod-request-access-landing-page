@@ -24,6 +24,7 @@ body {
 }
 
 main {
+  padding-left: 122px;
   margin-top: 130px;
 }
 
@@ -81,6 +82,10 @@ main {
   color: #ffffff;
 }
 
+.container .form .input-line input:focus {
+  outline: None;
+}
+
 .container .form .input-line input::-webkit-input-placeholder {
   color: #c2cbe5;
   opacity: 1;
@@ -115,6 +120,24 @@ main {
   font-weight: bold;
   font-size: 14px;
   color: #121725;
+  cursor: pointer;
+}
+
+.container .form .input-line button:hover {
+  background-color: #adf3d9;
+}
+
+.container .error {
+  display: none;
+}
+
+.container .error.visible {
+  display: block;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: #fb3e3e;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .container .logo-line {

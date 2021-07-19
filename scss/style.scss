@@ -24,6 +24,7 @@ body {
 }
 
 main {
+  padding-left: 122px;
   margin-top: 130px;
 }
 
@@ -77,6 +78,10 @@ main {
         font-weight: bold;
         font-size: 14px;
         color: $color4;
+
+        &:focus {
+          outline: None;
+        }
       }
 
       input::placeholder {
@@ -98,8 +103,23 @@ main {
         font-weight: bold;
         font-size: 14px;
         color: $color3;
+        cursor: pointer;
+        &:hover {
+          background-color: lighten($color1, 20);
+        }
       }
     }
+  }
+  .error {
+    display: none;
+  }
+  .error.visible {
+    display: block;
+    margin-left: 15px;
+    margin-top: 10px;
+    color: #fb3e3e;
+    font-size: 14px;
+    font-weight: bold;
   }
   .logo-line {
     margin-top: 64px;
