@@ -176,6 +176,27 @@ main {
   left: -122px;
 }
 
-.background-image img {
+.background-image img.bg-desktop {
+  display: inline;
   width: 888px;
+}
+
+.background-image img.bg-tablet {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-left: 35px;
+    margin-top: 0px;
+  }
+  .container {
+    width: 635px;
+  }
+  .background-image img.bg-desktop {
+    display: none;
+  }
+  .background-image img.bg-tablet {
+    display: inline;
+  }
 }

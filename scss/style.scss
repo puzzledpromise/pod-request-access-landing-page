@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
-
-$color1: #54e6af;
-$color2: #2c344b;
-$color3: #121725;
-$color4: #ffffff;
-$color5: #5a668a;
-$color6: #c2cbe5;
+@import 'variables';
 
 * {
   margin: 0;
@@ -150,7 +144,32 @@ main {
   position: relative;
   left: -122px;
 
-  img {
+  img.bg-desktop {
+    display: inline;
     width: 888px;
+  }
+
+  img.bg-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-left: 35px;
+    margin-top: 0px;
+  }
+
+  .container {
+    width: 635px;
+  }
+
+  .background-image {
+    img.bg-desktop {
+      display: none;
+    }
+    img.bg-tablet {
+      display: inline;
+    }
   }
 }
