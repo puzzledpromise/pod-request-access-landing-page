@@ -150,7 +150,32 @@ main {
   position: relative;
   left: -122px;
 
-  img {
+  img.bg-desktop {
+    display: inline;
     width: 888px;
+  }
+
+  img.bg-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-left: 35px;
+    margin-top: 0px;
+  }
+
+  .container {
+    width: 635px;
+  }
+
+  .background-image {
+    img.bg-desktop {
+      display: none;
+    }
+    img.bg-tablet {
+      display: inline;
+    }
   }
 }
