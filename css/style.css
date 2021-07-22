@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Difference between display: none and visibility: hidden? : 
+
+display:none means that the tag in question will not appear on the page at all 
+(although you can still interact with it through the dom). There will be no space 
+allocated for it between the other tags.
+
+visibility:hidden means that unlike display:none, the tag is not visible, but 
+space is allocated for it on the page. The tag is rendered, it just isn't seen on the page.
+
+*/
+.background-image img.bg-desktop {
+  display: none;
+}
+
+.background-image img.bg-tablet {
+  display: none;
+}
+
+.background-image img.bg-mobile {
+  display: none;
+}
+
+body {
+  background-color: #121725;
+  color: #ffffff;
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  border: 1px solid yellow;
+  padding-left: 122px;
+  margin-top: 130px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .pod-logo {
+  position: absolute;
+  top: -25px;
+}
+
+main .pod-logo img {
+  width: 135px;
+  height: 56px;
+}
+
+main .container {
+  border: 1px solid red;
+  background-color: #121725;
+  z-index: 5;
+  width: 80%;
+  max-width: 723px;
+  margin-top: 130px;
+}
+
+main .container .form {
+  margin-top: 88px;
+  width: 723px;
+}
+
+main .container .form h1 {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 68px;
+  text-transform: uppercase;
+}
+
+main .container .form span {
+  color: #54e6af;
+}
+
+main .container .form p {
+  margin-top: 24px;
+  color: #c2cbe5;
+  width: 445px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+main .container .form .input-line input {
+  background-color: #2c344b;
+  height: 56px;
+  width: 427px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 40px;
+  padding-left: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+main .container .form .input-line input:focus {
+  outline: None;
+}
+
+main .container .form .input-line input::-webkit-input-placeholder {
+  color: #c2cbe5;
+  opacity: 1;
+}
+
+main .container .form .input-line input:-ms-input-placeholder {
+  color: #c2cbe5;
+  opacity: 1;
+}
+
+main .container .form .input-line input::-ms-input-placeholder {
+  color: #c2cbe5;
+  opacity: 1;
+}
+
+main .container .form .input-line input::placeholder {
+  color: #c2cbe5;
+  opacity: 1;
+}
+
+main .container .form .input-line button {
+  height: 56px;
+  outline: none;
+  background-color: #54e6af;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  border-radius: 20px;
+  margin-left: -173px;
+  height: 46px;
+  width: 162px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #121725;
+  cursor: pointer;
+}
+
+main .container .form .input-line button:hover {
+  background-color: #adf3d9;
+}
+
+main .container .error {
+  display: none;
+}
+
+main .container .error.visible {
+  display: block;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: #fb3e3e;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+main .container .logo-line {
+  margin-top: 64px;
+  height: 29px;
+}
+
+main .container .logo-line img {
+  height: 29px;
+  margin-right: 33px;
+}
+
+main .container img.pattern {
+  position: absolute;
+  right: 50px;
+  bottom: -45px;
+  right: 120px;
+}
+
+.background-image {
+  position: relative;
+  left: -122px;
+  width: 50%;
+}
+
+.background-image img.bg-desktop {
+  display: inline;
+  max-width: 888px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-left: 35px;
+    margin-top: 0px;
+  }
+  .container {
+    width: 635px;
+  }
+  .background-image img.bg-desktop {
+    display: none;
+  }
+  .background-image img.bg-tablet {
+    display: inline;
+  }
+}
