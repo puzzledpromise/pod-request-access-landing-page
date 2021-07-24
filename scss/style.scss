@@ -19,6 +19,10 @@ body {
     opacity: 0.1;
     width: 100%;
   }
+  img.tablet-bg {
+    display: none;
+  }
+
   background-color: $color3;
   font-family: 'Chivo', sans-serif;
   font-size: 15px;
@@ -95,7 +99,7 @@ main {
           height: 46px;
           border-radius: 30px;
           border: none;
-          padding-left: 15px;
+          padding-left: 32px;
           font-weight: bold;
           font-size: 14px;
           color: $color4;
@@ -118,7 +122,7 @@ main {
           outline: none;
           background-color: $color1;
           border: none;
-          border-radius: 20px;
+          border-radius: 30px;
           height: 46px;
           font-weight: bold;
           font-size: 14px;
@@ -131,13 +135,15 @@ main {
       }
 
       .error {
-        display: none;
+        visibility: hidden;
+        height: 35px;
+        margin-top: 5px;
       }
+
       .error.visible {
-        display: block;
-        margin-left: 15px;
-        margin-top: 10px;
         color: #fb3e3e;
+        visibility: visible;
+        margin-left: 15px;
         font-size: 14px;
         font-weight: bold;
       }
@@ -146,161 +152,139 @@ main {
   img.pattern {
     display: none;
   }
-  .background-image {
-    img.bg-desktop {
-      display: none;
-    }
-    img.bg-tablet {
-      display: none;
-    }
-  }
 }
-
-/*
-  border: 1px solid yellow;
-  padding-left: 122px;
-  margin-top: 130px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-
-  .pod-logo {
-    position: absolute;
-    top: -25px;
-
-    img {
-      width: 135px;
-      height: 56px;
-    }
-  }
-
-  .container {
-    border: 1px solid red;
-    background-color: $color3;
-    z-index: 5;
-    width: 80%;
-    max-width: 723px;
-    margin-top: 130px;
-
-    .form {
-      margin-top: 88px;
-      width: 723px;
-      h1 {
-        font-size: 52px;
-        font-weight: 400;
-        line-height: 68px;
-        text-transform: uppercase;
-      }
-
-      span {
-        color: $color1;
-      }
-
-      p {
-        margin-top: 24px;
-        color: $color6;
-        width: 445px;
-        font-size: 18px;
-        line-height: 28px;
-      }
-
-      .input-line {
-        input {
-          background-color: $color2;
-          height: 56px;
-          width: 427px;
-          border-radius: 30px;
-          border: none;
-          margin-top: 40px;
-          padding-left: 15px;
-          font-weight: bold;
-          font-size: 14px;
-          color: $color4;
-
-          &:focus {
-            outline: None;
-          }
-        }
-
-        input::placeholder {
-          color: $color6;
-          opacity: 1;
-        }
-
-        button {
-          height: 56px;
-          outline: none;
-          background-color: $color1;
-          padding-left: 15px;
-          padding-right: 15px;
-          border: none;
-          border-radius: 20px;
-          margin-left: -173px;
-          height: 46px;
-          width: 162px;
-          font-weight: bold;
-          font-size: 14px;
-          color: $color3;
-          cursor: pointer;
-          &:hover {
-            background-color: lighten($color1, 20);
-          }
-        }
-      }
-    }
-    .error {
-      display: none;
-    }
-    .error.visible {
-      display: block;
-      margin-left: 15px;
-      margin-top: 10px;
-      color: #fb3e3e;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    .logo-line {
-      margin-top: 64px;
-      height: 29px;
-
-      img {
-        height: 29px;
-        margin-right: 33px;
-      }
-    }
-
-    img.pattern {
-      position: absolute;
-      right: 50px;
-      bottom: -45px;
-      right: 120px;
-    }
-  }
-}
-
-.background-image {
-  position: relative;
-  left: -122px;
-  width: 50%;
-
-  img.bg-desktop {
-    display: inline;
-    max-width: 888px;
-  }
-}
-
-*/
 
 @media screen and (min-width: 768px) {
   body {
-    background-color: red;
+    img.mobile-bg {
+      display: none;
+    }
+    img.tablet-bg {
+      display: unset;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 491px;
+    }
+  }
 
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
     height: 100vh;
+
+    .pod-logo {
+      position: absolute;
+      margin-top: 50px;
+      margin-left: 39px;
+      width: 135px;
+      height: 56;
+    }
+
+    .container {
+      width: 635px;
+      height: 510px;
+      background-color: $color3;
+      margin-left: 39px;
+      margin-top: 258px;
+
+      .form {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        h1 {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 93px;
+          text-align: left;
+          font-size: 48px;
+          line-height: 56px;
+          font-weight: lighter;
+          margin-bottom: 16px;
+          span {
+            color: $color1;
+          }
+        }
+
+        p {
+          text-align: left;
+          max-width: 445px;
+          line-height: 26px;
+          font-size: 18px;
+          font-weight: 400;
+          margin-top: 31px;
+        }
+
+        .logo-line-mobile {
+          display: none;
+
+          img.logo {
+            height: 17px;
+          }
+        }
+
+        .input-line {
+          display: flex;
+          flex-direction: row;
+          margin-top: 40px;
+
+          input {
+            display: unset;
+            width: 427px;
+            height: 56px;
+            font-size: 14px;
+
+            &:focus {
+              outline: None;
+            }
+          }
+
+          button {
+            margin: 0;
+            width: 162px;
+            margin-left: -167px;
+            display: unset;
+            margin-top: 5px;
+            height: 47px;
+          }
+        }
+        .logo-line {
+          display: flex;
+          flex-direction: row;
+          width: 535px;
+          height: 30px;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 30px;
+
+          img.logo-spotify {
+            height: 28px;
+          }
+          img.logo-apple {
+            height: 29px;
+          }
+          img.logo-google {
+            height: 18px;
+          }
+          img.logo-pocket {
+            height: 26px;
+          }
+        }
+      }
+    }
+    img.pattern {
+      position: absolute;
+      bottom: 5px;
+      left: 30px;
+      display: unset;
+    }
   }
 }
-
 @media screen and (min-width: 1224px) {
   body {
     background-color: green;
